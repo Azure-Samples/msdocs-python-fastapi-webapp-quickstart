@@ -1,57 +1,36 @@
-# Project Name
+---
+page_type: sample
+description: "A minimal sample app that can be used to demonstrate deploying FastAPI apps to Azure App Service."
+languages:
+- python
+products:
+- azure
+- azure-app-service
+---
 
-(short, 1-3 sentenced, description of the project)
+# Deploy a Python (FastAPI) web app to Azure App Service - Sample Application
 
-## Features
+This is the sample FastAPI application for the Azure Quickstart [Deploy a Python (Django, Flask or FastAPI) web app to Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/quickstart-python).  For instructions on how to create the Azure resources and deploy the application to Azure, refer to the Quickstart article.
 
-This project framework provides the following features:
+Sample applications are available for the other frameworks here:
+- Django [https://github.com/Azure-Samples/msdocs-python-django-webapp-quickstart](https://github.com/Azure-Samples/msdocs-python-django-webapp-quickstart)
+- Flask [https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart](https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart)
 
-* Feature 1
-* Feature 2
-* ...
-
-## Getting Started
-
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [repository name]
-3. ...
+If you need an Azure account, you can [create on for free](https://azure.microsoft.com/en-us/free/).
 
 
-## Demo
+To try the application on your local machine:
 
-A demo app is included to show how to use the project.
+### Install the requrements
+`pip install -r requirements.txt`
 
-To run the demo, follow these steps:
+### Start the application
+`uvicorn main:app --reload`
 
-(Add steps to start up the demo)
+### Example call
+http://127.0.0.1:8000/items/4?q=my%20test%20query
 
-1.
-2.
-3.
+### Example json response
+`{"item_id": 4, "q": "my test query"}`
 
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+To learn more about FastAPI, see [FastAPI](https://fastapi.tiangolo.com/).
