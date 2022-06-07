@@ -30,5 +30,5 @@ async def hello(request: Request, name: str = Form(...)):
         return RedirectResponse(request.url_for("index"), status_code=status.HTTP_302_FOUND)
 
 if __name__ == '__main__':
-    uvicorn.run('myapp:app', host='0.0.0.0', port=8000)
+    uvicorn.run('main:app', host='0.0.0.0', port=8000)
 
