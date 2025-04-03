@@ -60,6 +60,7 @@ module web './core/host/appservice.bicep' = {
     appServicePlanId: appServicePlan.outputs.id
     runtimeName: 'python'
     runtimeVersion: '3.13'
+    appCommandLine: 'gunicorn -w 2 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8000 main:app'
     scmDoBuildDuringDeployment: true
     tags: union(tags, { 'azd-service-name': 'web' })
   }
